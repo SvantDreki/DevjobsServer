@@ -8,15 +8,14 @@ const app = express();
 //Conectar a la DB
 conectarBD();
 
-//Opciones de cors
-const opciones = {
-    origin: {
-        source: `${process.env.FRONTEND_URL}`
-    }
-}
-
 //Habilitar cors
-app.use( cors(opciones) );
+app.use( cors({
+    origin: {
+        source: 'https://unruffled-jepsen-efd1d0.netlify.app/'
+    }
+}) );
+
+app.options('*', cors());
 
 const port = process.env.PORT || 4000;
 
