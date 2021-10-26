@@ -33,6 +33,6 @@ app.use('/api/vacantes', require('./routes/vacantes'));
 app.use('/api/candidatos', require('./routes/candidatos')); 
 app.use('/api/skills', require('./routes/skills'));
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`Servidor en el puerto ${port}`);
 });
