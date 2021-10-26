@@ -10,7 +10,9 @@ conectarBD();
 
 //Opciones de cors
 const opciones = {
-    origin: process.env.FRONTEND_URL
+    origin: {
+        source: `${process.env.FRONTEND_URL}`
+    }
 }
 
 //Habilitar cors
